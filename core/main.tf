@@ -23,6 +23,6 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "testRG" {
   provider = azurerm.identity
-  name     = "rg-test-core3"
+  name     = "rg-test-core4"
   location = "westeurope"
 }
