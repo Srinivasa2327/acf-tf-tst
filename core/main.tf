@@ -16,6 +16,7 @@ provider "azurerm" {
   subscription_id = "f0171206-1198-46e5-becd-b0d858a02b8e"
   alias           = "identity"
   tenant_id       = "8221a120-d92b-4906-8da8-98f9b7e392fd"
+  client_id       = "c3491c87-0a13-486b-8f4f-b89b94d341d3" 
   use_oidc = true
   features {}
 }
