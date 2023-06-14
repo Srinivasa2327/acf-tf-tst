@@ -13,10 +13,10 @@ terraform {
 
 provider "azurerm" {
   #subscription_id = "1797cdd8-f92a-4272-ab4f-25d8ab9c0564"
-  subscription_id = "5959d188-3a85-4a68-98e0-af236b3c2cac"
+  subscription_id = "f0171206-1198-46e5-becd-b0d858a02b8e"
   alias           = "identity"
-  tenant_id       = "a738da5b-465c-4cbd-a7de-1b64c889d37a"
-  use_msi = true
+  tenant_id       = "8221a120-d92b-4906-8da8-98f9b7e392fd"
+  use_oidc = true
   features {}
 }
 
