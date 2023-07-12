@@ -1,0 +1,27 @@
+name: "Core Plan"
+
+#on:
+#  push:
+#    branches: [ACFTF34]
+on:
+  issue_comment:                                     
+    types: [created, edited, deleted]
+jobs:
+  Core-Plan:
+    #if: (github.event.comment.body == '/CORE_PLAN_PROD' || github.event.comment.body == '/CORE_PLAN_TEST')
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+      pull-requests: write
+      issues: write
+      checks: read
+      actions: write
+
+    steps:
+      - name: Set variables
+        run: |
+          echo ${{ github.event.pull_request.number }
+          echo ${{ github.event.comment.body }
+          echo $GITHUB_REF_NAME
+          echo ${{ github.sha }}
