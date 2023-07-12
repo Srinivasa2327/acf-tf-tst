@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Set variables
         run: |
-          echo ${{ github.event.pull_request.number }
-          echo ${{ github.event.comment.body }
+          echo ${{ github.event.pull_request.number  }}
+          echo ${{ github.event.comment.body  }}
           echo $GITHUB_REF_NAME
           echo ${{ github.sha }}
