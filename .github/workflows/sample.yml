@@ -21,12 +21,12 @@ jobs:
     steps:
       - name: Set variables
         run: |
-          echo ${{ github.event.pull_request.number  }}
+          echo ${{ github.event.issue.number }}
           echo ${{ github.event.comment.body  }}
           echo $GITHUB_REF_NAME
           echo ${{ github.sha }}
           echo "$(gh pr view $PR_NO --repo $REPO --json headRefName --jq '.headRefName')"
         env:
           REPO: ${{ github.repository }}
-          PR_NO: ${{ github.event.pull_request.number  }}
+          PR_NO: ${{ github.event.issue.number }}
           GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
