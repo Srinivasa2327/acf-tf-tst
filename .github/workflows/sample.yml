@@ -8,7 +8,7 @@ on:
     types: [created, edited, deleted]
 jobs:
   Core-Plan:
-    #if: (github.event.comment.body == '/CORE_PLAN_PROD' || github.event.comment.body == '/CORE_PLAN_TEST')
+    #if: (github.event.comment.body == '/CORE_PLAN_PROD' || github.event.comment.body == '/CORE_PLAN_TEST2')
     runs-on: ubuntu-latest
     permissions:
       id-token: write
