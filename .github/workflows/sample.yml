@@ -25,7 +25,7 @@ jobs:
             i=0
             while [ $acistate != "Terminated" ]
             do
-              sleep 10
+              sleep 50
               echo $i
               i=$((i+1))
               if [[ $i -gt 5 ]]; then
