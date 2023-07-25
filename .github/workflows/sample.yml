@@ -21,14 +21,14 @@ jobs:
     steps:
       - name: Set variables
         run: |
-          acistate="Running"
-          i=0
-          while [ $acistate != "Terminated" ]
-          do
-            sleep 10
-            echo $i
-            i=$((i+1))
-            if [[ $i -gt 2 ]]; then
-              break
-            fi
-          done
+            acistate="Running"
+            i=0
+            while [ $acistate != "Terminated" ]
+            do
+              sleep 10
+              i=$((i+1))
+              if [[ $i -gt 5 ]]; then
+                break
+              fi
+              acistate="Terminated"
+            done
