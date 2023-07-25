@@ -23,7 +23,7 @@ jobs:
         run: |
           acistate="Running"
           i=0
-          while[ $acistate != "Terminated" ];
+          while [ $acistate != "Terminated" ]
           do
             sleep 10
             echo $i
