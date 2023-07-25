@@ -26,6 +26,7 @@ jobs:
             while [ $acistate != "Terminated" ]
             do
               sleep 10
+              echo $i
               i=$((i+1))
               if [[ $i -gt 5 ]]; then
                 break
