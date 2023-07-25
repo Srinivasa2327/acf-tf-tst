@@ -21,18 +21,14 @@ jobs:
     steps:
       - name: Set variables
         run: |
-          echo ${{ github.event.issue.number }}
-          echo ${{ github.event.comment.body  }}
-          echo $GITHUB_REF_NAME
-          echo ${{ github.sha }}
-          echo "$(gh pr view $PR_NO --repo $REPO --json headRefName --jq '.headRefName')"
-          REPO_NAME_SPLIT=`echo "$REPO" | awk -F '/' '{print $2}'`
-          echo "REPO_NAME=$REPO_NAME_SPLIT" >> $GITHUB_ENV
-        env:
-          REPO: ${{ github.repository }}
-          PR_NO: ${{ github.event.issue.number }}
-          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
-
-      - name: Print variables
-        run: |
-          echo $REPO_NAME
+          acistate="Running"
+          i=0
+          while($acistate != "Terminated")
+          do
+            sleep 10
+            echo $i
+            i=$((i+1))
+            if [[ $i -gt 2 ]]; then
+              break
+            fi
+          done
